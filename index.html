@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Sigmar+One&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,20 +16,50 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-
+    <script
+      src="https://kit.fontawesome.com/3110f50c06.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Favourite Restaurant</title>
     <style>
       :root {
         --heading-font: "Sigmar One", cursive;
+        --secondary-font: "Montserrat", sans-serif;
       }
       body {
         margin: 0;
         padding: 0;
+        font-family: var(--secondary-font);
+      }
+      footer {
+        margin: 0;
+        padding: 30px 0px;
+        border-top: 1px solid rgb(109, 109, 109);
+        border-bottom: 1px solid rgb(109, 109, 109);
+      }
+      footer h2 {
+        font-family: var(--heading-font);
+        font-size: 24px;
+      }
+      .button {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        padding: 15px 30px;
+        border: 1px solid rgb(109, 109, 109);
+        border-radius: 40px;
+        transition: 0.35 all ease-in-out;
+        width: 230px;
+        text-align: center;
+      }
+      .button:hover {
+        background-color: black;
+        color: white;
       }
       .landing-page {
         margin: 0;
         padding: 250px 0px;
-        background-image: url(images/landing-page-image.jpg);
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/679/original/landing-page-image.jpg?1681311620);
         background-size: cover;
         background-repeat: no-repeat;
       }
@@ -73,18 +103,77 @@
         line-height: 30px;
         margin-bottom: 30px;
       }
-      .about-us-short-description a {
-        text-decoration: none;
-        color: black;
-        font-weight: 500;
-        padding: 15px 30px;
-        border: 1px solid rgb(109, 109, 109);
-        border-radius: 40px;
-        transition: 0.35 all ease-in-out;
+      .food-container {
+        padding: 30px;
+        margin: 0 auto;
       }
-      .about-us-short-description a:hover {
-        background-color: black;
-        color: white;
+      .col-lg-3 {
+        padding: 50px;
+      }
+      .col-lg-3 p {
+        font-weight: 700;
+      }
+      .first-image,
+      .second-image,
+      .third-image,
+      .forth-image {
+        border: 1px solid rgb(109, 109, 109);
+      }
+      .first-image {
+        border-radius: 0px 200px 0px 0px;
+      }
+      .second-image {
+        border-radius: 0px 0px 0px 200px;
+      }
+      .third-image {
+        border-radius: 200px 0px 0px 0px;
+      }
+      .forth-image {
+        border-radius: 0px 0px 200px 0px;
+      }
+      .food-buttons {
+        display: flex;
+        justify-content: center;
+      }
+      .food-buttons a {
+        margin: 10px;
+      }
+      .about-us-short-description .col-lg-6 {
+        display: flex;
+        justify-content: space-around;
+      }
+      .about-us-short-description .col-lg-6 a {
+        margin: 0 10px;
+      }
+      footer {
+        padding: 50px;
+      }
+      .footer-links h2 {
+        font-size: 34px;
+      }
+      .footer-links a {
+        font-weight: 500;
+        color: black;
+        margin: 10px 0px;
+        padding: 5px;
+        text-decoration: none;
+        transition: 0.35s all ease-in-out;
+      }
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+      .footer-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .footer-icons a {
+        color: black;
+        font-size: 25px;
+        text-decoration: none;
+      }
+      .footer-icons a:hover {
+        opacity: 0.7;
       }
       @media (max-width: 1197px) {
         .landing-page {
@@ -108,6 +197,33 @@
           margin-top: 20px;
           text-align: center;
         }
+        .col-lg-3 {
+          padding: 15px;
+        }
+        .col-lg-3 img {
+          display: block;
+          margin: 0 auto;
+          width: 70%;
+        }
+        .food-buttons {
+          flex-direction: column;
+        }
+        .food-buttons a {
+          width: 90%;
+        }
+        .footer-links {
+          text-align: center;
+        }
+        footer {
+          padding: 30px;
+        }
+        .footer-icons {
+          display: flex;
+          justify-content: center;
+        }
+        .footer-icons a {
+          margin: 20px;
+        }
       }
     </style>
   </head>
@@ -126,7 +242,7 @@
         <div class="col-lg-6">
           <img
             class="img-fluid"
-            src="/images/restaurant-people.jpg"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/681/original/restaurant-people.jpg?1681311738"
             alt="People sitting around table in Mexican Restaurant"
           />
         </div>
@@ -139,19 +255,75 @@
             of culture, community, and comida threading plant-based eaters to
             the Mexican palate.
           </p>
-          <a href="#">Read more about us &#x2192;</a>
+          <a href="#" class="button about-us-button" title="About us"
+            >Read more about us &#x2192;</a
+          >
         </div>
       </div>
     </div>
     <div>
-      <p class="text-center quote-container mt-3">We Are 100% Vegan</p>
+      <p class="text-center quote-container mt-5">We Are 100% Vegan</p>
     </div>
-    <div class="container">
+    <div class="container food-container">
       <div class="row">
-        <div class="col-3">
-          <img src="/images/" alt="" />
+        <div class="col-lg-3">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/678/original/burrito.JPG?1681311512"
+            class="img-fluid first-image"
+            alt="A vegan burrito"
+          />
+          <p class="text-center mt-2">Burritos</p>
+        </div>
+        <div class="col-lg-3">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/682/original/salad.jpg?1681311761"
+            class="img-fluid second-image"
+            alt="Vegan salad"
+          />
+          <p class="text-center mt-2">Salads</p>
+        </div>
+        <div class="col-lg-3">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/680/original/quesadilla.jpg?1681311707"
+            class="img-fluid third-image"
+            alt="Vegan quesadillas"
+          />
+          <p class="text-center mt-2">Quesadillas</p>
+        </div>
+        <div class="col-lg-3">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/684/original/tacos.jpg?1681311814"
+            class="img-fluid forth-image"
+            alt="Vegan tacos"
+          />
+          <p class="text-center mt-2">Tacos</p>
         </div>
       </div>
+      <div class="food-buttons">
+        <a href="#" class="button menu-button" title="Menu"
+          >See our full menu &#x2192;</a
+        >
+        <a href="#" class="button table-button" title="Menu"
+          >Book a table &#x2192;</a
+        >
+      </div>
     </div>
+    <footer>
+      <div class="container footer-container">
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column footer-links">
+            <h2>The Vegan Mexican</h2>
+            <a href="#" title="Booking">Book a table</a>
+            <a href="#" title="About">Get to know our story</a>
+            <a href="#" title="Contact">Contact us</a>
+          </div>
+          <div class="col-lg-6 footer-icons">
+            <a href="#"><i class="fa-regular fa-envelope fa-2xl"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
