@@ -17,6 +17,11 @@
       crossorigin="anonymous"
     />
     <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/3110f50c06.js"
       crossorigin="anonymous"
     ></script>
@@ -33,13 +38,39 @@
       }
       footer {
         margin: 0;
-        padding: 30px 0px;
-        border-top: 1px solid rgb(109, 109, 109);
-        border-bottom: 1px solid rgb(109, 109, 109);
+        padding: 50px 0px;
       }
       footer h2 {
         font-family: var(--heading-font);
-        font-size: 24px;
+        font-size: 34px;
+      }
+      .navbar {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+      }
+      .navbar-brand {
+        font-size: 18px;
+      }
+      .navbar-nav a {
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 10px 10px 50px !important;
+      }
+      nav a:hover {
+        opacity: 0.6;
+      }
+      .logo {
+        font-size: 28px;
+        color: black;
+        font-family: var(--heading-font);
+        text-decoration: none;
+        font-weight: 700;
+        padding: 0;
+        margin: 0 !important;
+        transition: 0.55s all ease-in-out;
+      }
+      .logo:hover {
+        font-size: 30px;
       }
       .button {
         text-decoration: none;
@@ -58,8 +89,8 @@
       }
       .landing-page {
         margin: 0;
-        padding: 250px 0px;
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/679/original/landing-page-image.jpg?1681311620);
+        padding: 180px 0px !important;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/909/original/pexels-roman-odintsov-4958779.jpg?1681423903);
         background-size: cover;
         background-repeat: no-repeat;
       }
@@ -145,11 +176,7 @@
       .about-us-short-description .col-lg-6 a {
         margin: 0 10px;
       }
-      footer {
-        padding: 50px;
-      }
-      .footer-links h2 {
-        font-size: 34px;
+      .footer-container {
       }
       .footer-links a {
         font-weight: 500;
@@ -175,9 +202,16 @@
       .footer-icons a:hover {
         opacity: 0.7;
       }
+      .footer-paragraph {
+        font-size: 12px;
+        opacity: 0.7;
+      }
       @media (max-width: 1197px) {
+        .navbar-nav a {
+          padding: 15px !important;
+        }
         .landing-page {
-          padding: 60px 10px;
+          padding: 170px 10px !important;
         }
         .landing-page h1 {
           font-size: 45px;
@@ -227,7 +261,51 @@
       }
     </style>
   </head>
+
   <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a href="/index.html" class="logo"
+            ><i
+              class="fa-solid fa-pepper-hot fa-sm m-2"
+              style="color: #e10e0e"
+            ></i
+            >TVM</a
+          >
+          <a
+            class="navbar-brand ps-5 d-none d-lg-block"
+            title="Homepage The Vegan Mexican"
+            href="index.html"
+            >The Vegan Mexican</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link active" title="Booking" href="#"
+                >Book a table</a
+              >
+              <a class="nav-link active" title="About" href="#">About us</a>
+              <a class="nav-link active" title="Contact" href="#">Contact us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <div class="landing-page">
       <p class="text-center">Welcome to us at</p>
       <h1 class="text-lg-center">The Vegan Mexican</h1>
@@ -247,7 +325,13 @@
           />
         </div>
         <div class="col-lg-6 about-us-short-description">
-          <h2>The Vegan Mexican</h2>
+          <h2>
+            The Vegan Mexican
+            <i
+              class="fa-solid fa-pepper-hot fa-bounce fa-md"
+              style="color: #e10e0e"
+            ></i>
+          </h2>
           <p>
             Fortunately, many foods from Mexican culture, such as rice, beans,
             and fruits, are naturally vegan, and many traditional dishes do not
@@ -262,7 +346,7 @@
       </div>
     </div>
     <div>
-      <p class="text-center quote-container mt-5">We Are 100% Vegan</p>
+      <p class="text-center quote-container mt-2">We Are 100% Vegan</p>
     </div>
     <div class="container food-container">
       <div class="row">
@@ -308,6 +392,13 @@
         >
       </div>
     </div>
+    <div>
+      <p class="quote-container text-center">
+        <i class="fa-solid fa-pepper-hot fa-xl m-3" style="color: #e10e0e"></i>
+        <i class="fa-solid fa-pepper-hot fa-xl m-3" style="color: #e10e0e"></i>
+        <i class="fa-solid fa-pepper-hot fa-xl m-3" style="color: #e10e0e"></i>
+      </p>
+    </div>
     <footer>
       <div class="container footer-container">
         <div class="row">
@@ -324,6 +415,11 @@
           </div>
         </div>
       </div>
+      <p class="text-center footer-paragraph">
+        This is a fictive company created for a SheCode Monthly Challenge. Coded
+        by Julia Frejd and is open sourced on
+        <a href="https://github.com/juliafrejd" target="_blank">GitHub</a>
+      </p>
     </footer>
   </body>
 </html>
