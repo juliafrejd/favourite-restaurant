@@ -120,12 +120,16 @@
       .quote {
         font-style: italic;
       }
+      .col-lg-6 {
+        padding: 80px;
+      }
       .about-us-container {
-        padding: 50px 0px;
+        padding: 20px;
         margin: 0 auto;
       }
       .about-us-short-description {
-        margin-top: 130px;
+        margin-top: 100px;
+        padding: 0 10px;
       }
       .about-us-short-description h1 {
         font-weight: 700;
@@ -133,6 +137,18 @@
       .about-us-short-description p {
         line-height: 30px;
         margin-bottom: 30px;
+        width: 600px;
+      }
+      .about-us-short-description .col-lg-6 {
+        display: flex;
+        justify-content: space-around;
+      }
+      .about-us-short-description .col-lg-6 a {
+        margin: 0 10px;
+      }
+      .about-us-image {
+        border-radius: 500px 500px 0px 0px;
+        height: 280px !important;
       }
       .food-container {
         padding: 30px;
@@ -147,7 +163,8 @@
       .first-image,
       .second-image,
       .third-image,
-      .forth-image {
+      .forth-image,
+      .about-us-image {
         border: 1px solid rgb(109, 109, 109);
       }
       .first-image {
@@ -169,15 +186,7 @@
       .food-buttons a {
         margin: 10px;
       }
-      .about-us-short-description .col-lg-6 {
-        display: flex;
-        justify-content: space-around;
-      }
-      .about-us-short-description .col-lg-6 a {
-        margin: 0 10px;
-      }
-      .footer-container {
-      }
+
       .footer-links a {
         font-weight: 500;
         color: black;
@@ -220,16 +229,28 @@
         .landing-page p {
           font-size: 18px;
         }
+        .col-lg-6 {
+          padding: 20px;
+        }
         .about-us-container {
-          padding: 10px;
+          padding: 20px;
         }
         .about-us-container .row {
-          flex-direction: column;
+          flex-direction: column-reverse;
           align-items: center;
         }
         .about-us-short-description {
           margin-top: 20px;
           text-align: center;
+        }
+        .about-us-short-description h2 {
+          font-weight: 600;
+        }
+        .about-us-short-description p {
+          width: auto;
+        }
+        .about-us-image {
+          height: auto !important;
         }
         .col-lg-3 {
           padding: 15px;
@@ -319,7 +340,7 @@
       <div class="row">
         <div class="col-lg-6">
           <img
-            class="img-fluid"
+            class="img-fluid about-us-image"
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/681/original/restaurant-people.jpg?1681311738"
             alt="People sitting around table in Mexican Restaurant"
           />
