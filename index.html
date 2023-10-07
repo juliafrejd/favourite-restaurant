@@ -26,260 +26,7 @@
       crossorigin="anonymous"
     ></script>
     <title>Favourite Restaurant</title>
-    <style>
-      :root {
-        --heading-font: "Sigmar One", cursive;
-        --secondary-font: "Montserrat", sans-serif;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: var(--secondary-font);
-      }
-      footer {
-        margin: 0;
-        padding: 30px 0px;
-      }
-      footer h2 {
-        font-family: var(--heading-font);
-        font-size: 34px;
-      }
-      .navbar {
-        background-color: rgba(255, 255, 255, 0.9) !important;
-      }
-      .navbar-brand {
-        font-size: 18px;
-      }
-      .navbar-nav a {
-        font-size: 14px;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: 10px 10px 10px 50px !important;
-      }
-      nav a:hover {
-        opacity: 0.6;
-      }
-      .logo {
-        font-size: 28px;
-        color: black;
-        font-family: var(--heading-font);
-        text-decoration: none;
-        font-weight: 700;
-        padding: 0;
-        margin: 0 !important;
-        transition: 0.55s all ease-in-out;
-      }
-      .logo:hover {
-        font-size: 30px;
-      }
-      .button {
-        text-decoration: none;
-        color: black;
-        font-weight: 500;
-        padding: 15px 30px;
-        border: 1px solid rgb(109, 109, 109);
-        border-radius: 40px;
-        transition: 0.35 all ease-in-out;
-        width: 230px;
-        text-align: center;
-      }
-      .button:hover {
-        background-color: black;
-        color: white;
-      }
-      .landing-page {
-        margin: 0;
-        padding: 180px 0px !important;
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/909/original/pexels-roman-odintsov-4958779.jpg?1681423903);
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .landing-page h1 {
-        margin: 0;
-        padding: 0;
-        font-family: var(--heading-font);
-        font-style: italic;
-        color: white;
-        font-size: 100px;
-        text-transform: uppercase;
-      }
-      .landing-page p {
-        padding: 0;
-        margin: 0;
-        color: white;
-        font-size: 24px;
-        font-weight: 500;
-        text-transform: uppercase;
-      }
-      .quote-container {
-        margin: 0;
-        padding: 10px 0px;
-        border-top: 1px solid rgb(109, 109, 109);
-        border-bottom: 1px solid rgb(109, 109, 109);
-      }
-      .quote {
-        font-style: italic;
-      }
-      .col-lg-6 {
-        padding: 80px;
-      }
-      .about-us-container {
-        padding: 20px;
-        margin: 0 auto;
-      }
-      .about-us-short-description {
-        margin-top: 100px;
-        padding: 0 10px;
-      }
-      .about-us-short-description h1 {
-        font-weight: 700;
-      }
-      .about-us-short-description p {
-        line-height: 30px;
-        margin-bottom: 30px;
-        width: 600px;
-      }
-      .about-us-short-description .col-lg-6 {
-        display: flex;
-        justify-content: space-around;
-      }
-      .about-us-short-description .col-lg-6 a {
-        margin: 0 10px;
-      }
-      .about-us-image {
-        border-radius: 500px 500px 0px 0px;
-        height: 280px !important;
-      }
-      .food-container {
-        padding: 30px;
-        margin: 0 auto;
-      }
-      .col-lg-3 {
-        padding: 50px;
-      }
-      .col-lg-3 p {
-        font-weight: 700;
-      }
-      .first-image,
-      .second-image,
-      .third-image,
-      .forth-image,
-      .about-us-image {
-        border: 1px solid rgb(109, 109, 109);
-      }
-      .first-image {
-        border-radius: 0px 200px 0px 0px;
-      }
-      .second-image {
-        border-radius: 0px 0px 0px 200px;
-      }
-      .third-image {
-        border-radius: 200px 0px 0px 0px;
-      }
-      .forth-image {
-        border-radius: 0px 0px 200px 0px;
-      }
-      .food-buttons {
-        display: flex;
-        justify-content: center;
-      }
-      .food-buttons a {
-        margin: 10px;
-      }
-      .footer-links a {
-        font-weight: 500;
-        color: black;
-        margin: 10px 0px;
-        padding: 5px;
-        text-decoration: none;
-        transition: 0.35s all ease-in-out;
-      }
-      .footer-links a:hover {
-        text-decoration: underline;
-      }
-      .footer-icons {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-      }
-      .footer-icons a {
-        color: black;
-        font-size: 25px;
-        text-decoration: none;
-      }
-      .footer-icons a:hover {
-        opacity: 0.7;
-      }
-      .footer-paragraph {
-        font-size: 12px;
-        opacity: 0.7;
-      }
-      @media (max-width: 1197px) {
-        .navbar-nav a {
-          padding: 15px !important;
-        }
-        .landing-page {
-          padding: 170px 10px !important;
-        }
-        .landing-page h1 {
-          font-size: 45px;
-          text-align: center;
-        }
-        .landing-page p {
-          font-size: 18px;
-        }
-        .col-lg-6 {
-          padding: 20px;
-        }
-        .about-us-container {
-          padding: 20px;
-        }
-        .about-us-container .row {
-          flex-direction: column-reverse;
-          align-items: center;
-        }
-        .about-us-short-description {
-          margin-top: 20px;
-          text-align: center;
-        }
-        .about-us-short-description h2 {
-          font-weight: 600;
-        }
-        .about-us-short-description p {
-          width: auto;
-        }
-        .about-us-image {
-          height: auto !important;
-        }
-        .col-lg-3 {
-          padding: 15px;
-        }
-        .col-lg-3 img {
-          display: block;
-          margin: 0 auto;
-          width: 70%;
-        }
-        .food-buttons {
-          flex-direction: column;
-        }
-        .food-buttons a {
-          width: 90%;
-        }
-        .footer-links {
-          text-align: center;
-        }
-        footer {
-          padding: 30px;
-        }
-        .footer-icons {
-          display: flex;
-          justify-content: center;
-        }
-        .footer-icons a {
-          margin: 20px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/source/style.css" />
   </head>
 
   <body>
@@ -315,6 +62,7 @@
             id="navbarNavAltMarkup"
           >
             <div class="navbar-nav">
+              <a class="nav-link" id="open" title="Booking" href="#">Menu</a>
               <a class="nav-link active" title="Booking" href="#"
                 >Book a table</a
               >
@@ -325,117 +73,144 @@
         </div>
       </nav>
     </header>
-
-    <div class="landing-page">
-      <p class="text-center">Welcome to us at</p>
-      <h1 class="text-lg-center">The Vegan Mexican</h1>
-    </div>
-    <div>
-      <p class="text-center quote-container">
-        <span class="quote">"Mi casa es su casa"</span> - The Vegan Mexican
-      </p>
-    </div>
-    <div class="container about-us-container">
-      <div class="row">
-        <div class="col-lg-6">
-          <img
-            class="img-fluid about-us-image"
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/681/original/restaurant-people.jpg?1681311738"
-            alt="People sitting around table in Mexican Restaurant"
-          />
+    <main>
+      <div class="landing-page">
+        <p class="text-center">Welcome to us at</p>
+        <h1 class="text-lg-center">The Vegan Mexican</h1>
+      </div>
+      <div>
+        <p class="text-center quote-container">
+          <span class="quote">"Mi casa es su casa"</span> - The Vegan Mexican
+        </p>
+      </div>
+      <div class="container about-us-container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid about-us-image"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/681/original/restaurant-people.jpg?1681311738"
+              alt="People sitting around table in Mexican Restaurant"
+            />
+          </div>
+          <div class="col-lg-6 about-us-short-description">
+            <h2>
+              The Vegan Mexican
+              <i
+                class="fa-solid fa-pepper-hot fa-bounce fa-md"
+                style="color: #e10e0e"
+              ></i>
+            </h2>
+            <p>
+              Fortunately, many foods from Mexican culture, such as rice, beans,
+              and fruits, are naturally vegan, and many traditional dishes do
+              not call for animal-based ingredients. The Vegan Mexican is a
+              patchwork of culture, community, and comida threading plant-based
+              eaters to the Mexican palate.
+            </p>
+            <a href="#" class="button about-us-button" title="About us"
+              >Read more about us &#x2192;</a
+            >
+          </div>
         </div>
-        <div class="col-lg-6 about-us-short-description">
-          <h2>
-            The Vegan Mexican
-            <i
-              class="fa-solid fa-pepper-hot fa-bounce fa-md"
-              style="color: #e10e0e"
-            ></i>
-          </h2>
-          <p>
-            Fortunately, many foods from Mexican culture, such as rice, beans,
-            and fruits, are naturally vegan, and many traditional dishes do not
-            call for animal-based ingredients. The Vegan Mexican is a patchwork
-            of culture, community, and comida threading plant-based eaters to
-            the Mexican palate.
-          </p>
-          <a href="#" class="button about-us-button" title="About us"
-            >Read more about us &#x2192;</a
+      </div>
+      <div>
+        <p class="text-center quote-container mt-2">We Are 100% Vegan</p>
+      </div>
+      <div class="container food-container">
+        <div class="row">
+          <div class="col-lg-3">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/678/original/burrito.JPG?1681311512"
+              class="img-fluid first-image"
+              alt="A vegan burrito"
+            />
+            <p class="text-center mt-2">Burritos</p>
+          </div>
+          <div class="col-lg-3">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/682/original/salad.jpg?1681311761"
+              class="img-fluid second-image"
+              alt="Vegan salad"
+            />
+            <p class="text-center mt-2">Salads</p>
+          </div>
+          <div class="col-lg-3">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/680/original/quesadilla.jpg?1681311707"
+              class="img-fluid third-image"
+              alt="Vegan quesadillas"
+            />
+            <p class="text-center mt-2">Quesadillas</p>
+          </div>
+          <div class="col-lg-3">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/684/original/tacos.jpg?1681311814"
+              class="img-fluid forth-image"
+              alt="Vegan tacos"
+            />
+            <p class="text-center mt-2">Tacos</p>
+          </div>
+        </div>
+        <div class="food-buttons">
+          <a
+            href="#"
+            id="blur"
+            onclick="toggle()"
+            class="button menu-button"
+            title="Menu"
+            >See our full menu &#x2192;</a
+          >
+          <a href="#" class="button table-button" title="Menu"
+            >Book a table &#x2192;</a
           >
         </div>
       </div>
-    </div>
-    <div>
-      <p class="text-center quote-container mt-2">We Are 100% Vegan</p>
-    </div>
-    <div class="container food-container">
-      <div class="row">
-        <div class="col-lg-3">
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/678/original/burrito.JPG?1681311512"
-            class="img-fluid first-image"
-            alt="A vegan burrito"
-          />
-          <p class="text-center mt-2">Burritos</p>
-        </div>
-        <div class="col-lg-3">
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/682/original/salad.jpg?1681311761"
-            class="img-fluid second-image"
-            alt="Vegan salad"
-          />
-          <p class="text-center mt-2">Salads</p>
-        </div>
-        <div class="col-lg-3">
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/680/original/quesadilla.jpg?1681311707"
-            class="img-fluid third-image"
-            alt="Vegan quesadillas"
-          />
-          <p class="text-center mt-2">Quesadillas</p>
-        </div>
-        <div class="col-lg-3">
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/684/original/tacos.jpg?1681311814"
-            class="img-fluid forth-image"
-            alt="Vegan tacos"
-          />
-          <p class="text-center mt-2">Tacos</p>
-        </div>
+      <div>
+        <p class="quote-container text-center">
+          <i
+            class="fa-solid fa-pepper-hot fa-xl m-3"
+            style="color: #e10e0e"
+          ></i>
+          <i
+            class="fa-solid fa-pepper-hot fa-xl m-3"
+            style="color: #e10e0e"
+          ></i>
+          <i
+            class="fa-solid fa-pepper-hot fa-xl m-3"
+            style="color: #e10e0e"
+          ></i>
+        </p>
       </div>
-      <div class="food-buttons">
-        <a href="#" class="button menu-button" title="Menu"
-          >See our full menu &#x2192;</a
-        >
-        <a href="#" class="button table-button" title="Menu"
-          >Book a table &#x2192;</a
-        >
-      </div>
-    </div>
-    <div>
-      <p class="quote-container text-center">
-        <i class="fa-solid fa-pepper-hot fa-xl m-3" style="color: #e10e0e"></i>
-        <i class="fa-solid fa-pepper-hot fa-xl m-3" style="color: #e10e0e"></i>
-        <i class="fa-solid fa-pepper-hot fa-xl m-3" style="color: #e10e0e"></i>
-      </p>
-    </div>
+    </main>
     <footer>
       <div class="container footer-container">
         <div class="row">
-          <div class="col-lg-6 d-flex flex-column footer-links">
+          <div class="col-4 d-flex flex-column footer-links">
             <h2>The Vegan Mexican</h2>
             <a href="#" title="Booking">Book a table</a>
-            <a href="#" title="About">Get to know our story</a>
+            <a href="#" title="About">About us</a>
             <a href="#" title="Contact">Contact us</a>
           </div>
-          <div class="col-lg-6 footer-icons">
-            <a href="#"><i class="fa-regular fa-envelope fa-2xl"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+          <div class="col-4 d-flex flex-column footer-icons">
+            <a href="#"><i class="fa-regular fa-envelope fa-l"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram fa-l"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook fa-l"></i></a>
+          </div>
+          <div class="col-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.5166424945833!2d-9.147874924119966!3d38.70594587176555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193487639194b5%3A0xf1dd1b0b6b6c907e!2sCais%20do%20Sodr%C3%A9!5e0!3m2!1ssv!2spt!4v1696706989369!5m2!1ssv!2spt"
+              width="400"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="google-maps"
+            ></iframe>
           </div>
         </div>
       </div>
-      <p class="text-center footer-paragraph">
+      <p class="text-center mt-4 footer-paragraph">
         This is a fictive company created for a SheCodes Monthly Challenge.
         Coded by Julia Frejd and is open sourced on
         <a href="https://github.com/juliafrejd" target="_blank">GitHub</a>

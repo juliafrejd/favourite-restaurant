@@ -1,0 +1,263 @@
+:root {
+  --heading-font: "Sigmar One", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--secondary-font);
+}
+footer {
+  margin: 0;
+  padding: 30px 0px;
+}
+footer h2 {
+  font-family: var(--heading-font);
+  font-size: 34px;
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.navbar-brand {
+  font-size: 18px;
+}
+.navbar-nav a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 10px 10px 50px !important;
+}
+nav a:hover {
+  opacity: 0.6;
+}
+.logo {
+  font-size: 28px;
+  color: black;
+  font-family: var(--heading-font);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 !important;
+  transition: 0.55s all ease-in-out;
+}
+.logo:hover {
+  font-size: 30px;
+}
+.button {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 15px 30px;
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 40px;
+  transition: 0.35 all ease-in-out;
+  width: 230px;
+  text-align: center;
+}
+.button:hover {
+  background-color: black;
+  color: white;
+}
+.landing-page {
+  margin: 0;
+  padding: 180px 0px !important;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/909/original/pexels-roman-odintsov-4958779.jpg?1681423903);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-page h1 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--heading-font);
+  font-style: italic;
+  color: white;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.landing-page p {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.quote-container {
+  margin: 0;
+  padding: 10px 0px;
+  border-top: 1px solid rgb(109, 109, 109);
+  border-bottom: 1px solid rgb(109, 109, 109);
+}
+.quote {
+  font-style: italic;
+}
+.col-lg-6 {
+  padding: 80px;
+}
+.about-us-container {
+  padding: 20px;
+  margin: 0 auto;
+}
+.about-us-short-description {
+  margin-top: 100px;
+  padding: 0 10px;
+}
+.about-us-short-description h1 {
+  font-weight: 700;
+}
+.about-us-short-description p {
+  line-height: 30px;
+  margin-bottom: 30px;
+  width: 600px;
+}
+.about-us-short-description .col-lg-6 {
+  display: flex;
+  justify-content: space-around;
+}
+.about-us-short-description .col-lg-6 a {
+  margin: 0 10px;
+}
+.about-us-image {
+  border-radius: 500px 500px 0px 0px;
+  height: 280px !important;
+}
+.food-container {
+  padding: 30px;
+  margin: 0 auto;
+}
+.col-lg-3 {
+  padding: 50px;
+}
+.col-lg-3 p {
+  font-weight: 700;
+}
+.first-image,
+.second-image,
+.third-image,
+.forth-image,
+.about-us-image {
+  border: 1px solid rgb(109, 109, 109);
+}
+.first-image {
+  border-radius: 0px 200px 0px 0px;
+}
+.second-image {
+  border-radius: 0px 0px 0px 200px;
+}
+.third-image {
+  border-radius: 200px 0px 0px 0px;
+}
+.forth-image {
+  border-radius: 0px 0px 200px 0px;
+}
+.food-buttons {
+  display: flex;
+  justify-content: center;
+}
+.food-buttons a {
+  margin: 10px;
+}
+.footer-links a {
+  font-weight: 500;
+  color: black;
+  margin: 10px 0px;
+  padding: 5px;
+  text-decoration: none;
+  transition: 0.35s all ease-in-out;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer-icons a {
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+}
+.footer-icons a:hover {
+  opacity: 0.7;
+}
+.footer-paragraph {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.7;
+  width: 500px;
+}
+
+@media (max-width: 1197px) {
+  .navbar-nav a {
+    padding: 15px !important;
+  }
+  .landing-page {
+    margin: 0 auto;
+    padding: 170px 10px !important;
+  }
+  .landing-page h1 {
+    font-size: 45px;
+    text-align: center;
+  }
+  .landing-page p {
+    font-size: 18px;
+  }
+  .col-lg-6 {
+    padding: 20px;
+  }
+  .about-us-container {
+    padding: 20px;
+  }
+  .about-us-container .row {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about-us-short-description {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .about-us-short-description h2 {
+    font-weight: 600;
+  }
+  .about-us-short-description p {
+    width: auto;
+  }
+  .about-us-image {
+    height: auto !important;
+  }
+  .col-lg-3 {
+    padding: 15px;
+  }
+  .col-lg-3 img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+  .food-buttons {
+    flex-direction: column;
+  }
+  .food-buttons a {
+    width: 90%;
+  }
+  .footer-container {
+    text-align: center;
+  }
+  .footer-container .row {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .col-4 {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto !important;
+  }
+  .footer-icons {
+    display: flex;
+    flex-direction: row !important;
+    padding: 20px;
+  }
+}
