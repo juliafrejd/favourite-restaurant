@@ -25,9 +25,9 @@
       src="https://kit.fontawesome.com/3110f50c06.js"
       crossorigin="anonymous"
     ></script>
+    <script src="source/index.js"></script>
     <title>Favourite Restaurant</title>
     <link rel="stylesheet" href="/source/style.css" />
-    <script src="source/index.js"></script>
   </head>
 
   <body>
@@ -75,96 +75,98 @@
       </nav>
     </header>
     <main>
-      <div class="landing-page">
-        <p class="text-center">Welcome to us at</p>
-        <h1 class="text-lg-center">The Vegan Mexican</h1>
-      </div>
-      <div>
-        <p class="text-center quote-container">
-          <span class="quote">"Mi casa es su casa"</span> - The Vegan Mexican
+      <div class="booking-form container">
+        <h1>
+          Welcome to The Vegan Mexican
+          <i class="fa-solid fa-pepper-hot fa-md" style="color: #e10e0e"></i>
+        </h1>
+        <p>
+          We allow walk-ins for meals but as we cannot promise it won't be full,
+          please feel free to book a table so you do not miss out on our
+          delicious food!
         </p>
-      </div>
-      <div class="container about-us-container">
-        <div class="row">
-          <div class="col-lg-6">
-            <img
-              class="img-fluid about-us-image"
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/681/original/restaurant-people.jpg?1681311738"
-              alt="People sitting around table in Mexican Restaurant"
-            />
+
+        <form>
+          <div class="row">
+            <div class="col">
+              <input
+                required
+                type="text"
+                class="form-control"
+                placeholder="First name"
+                aria-label="First name"
+              />
+            </div>
+            <div class="col">
+              <input
+                required
+                type="text"
+                class="form-control"
+                placeholder="Last name"
+                aria-label="Last name"
+              />
+            </div>
           </div>
-          <div class="col-lg-6 about-us-short-description">
-            <h2>
-              The Vegan Mexican
-              <i
-                class="fa-solid fa-pepper-hot fa-bounce fa-md"
-                style="color: #e10e0e"
-              ></i>
-            </h2>
-            <p>
-              Fortunately, many foods from Mexican culture, such as rice, beans,
-              and fruits, are naturally vegan, and many traditional dishes do
-              not call for animal-based ingredients. The Vegan Mexican is a
-              patchwork of culture, community, and comida threading plant-based
-              eaters to the Mexican palate.
-            </p>
-            <a href="#" class="button about-us-button" title="About us"
-              >Read more about us &#x2192;</a
-            >
+          <div class="row">
+            <div class="col">
+              <input
+                required
+                type="text"
+                class="form-control"
+                placeholder="E-mail address"
+                aria-label="E-mail address"
+              />
+            </div>
+            <div class="col">
+              <label class="visually-hidden" for="inlineFormSelectPref"
+                >Preference</label
+              >
+              <select required class="form-select" id="inlineFormSelectPref">
+                <option selected>Guests</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
           </div>
-        </div>
-      </div>
-      <div>
-        <p class="text-center quote-container mt-2">We Are 100% Vegan</p>
-      </div>
-      <div class="container food-container">
-        <div class="row">
-          <div class="col-lg-3">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/678/original/burrito.JPG?1681311512"
-              class="img-fluid first-image"
-              alt="A vegan burrito"
-            />
-            <p class="text-center mt-2">Burritos</p>
+          <div class="row">
+            <div class="col-4">
+              <label class="visually-hidden" for="inlineFormSelectPref"
+                >Preference</label
+              >
+              <select
+                required
+                class="form-select time"
+                id="inlineFormSelectPref"
+              >
+                <option disabled selected>Time</option>
+                <option value="18:00">18:00</option>
+                <option value="18:30">18:30</option>
+                <option value="19:00">19:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21.00">21:00</option>
+              </select>
+            </div>
+            <div class="col-4">
+              <input id="date" class="date" type="date" required />
+              <span class="validity"></span>
+            </div>
+            <div class="col-4">
+              <button
+                class="btn btn-primary submit-button"
+                type="submit"
+                value="submit"
+              >
+                Book the table
+              </button>
+            </div>
           </div>
-          <div class="col-lg-3">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/682/original/salad.jpg?1681311761"
-              class="img-fluid second-image"
-              alt="Vegan salad"
-            />
-            <p class="text-center mt-2">Salads</p>
-          </div>
-          <div class="col-lg-3">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/680/original/quesadilla.jpg?1681311707"
-              class="img-fluid third-image"
-              alt="Vegan quesadillas"
-            />
-            <p class="text-center mt-2">Quesadillas</p>
-          </div>
-          <div class="col-lg-3">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/684/original/tacos.jpg?1681311814"
-              class="img-fluid forth-image"
-              alt="Vegan tacos"
-            />
-            <p class="text-center mt-2">Tacos</p>
-          </div>
-        </div>
-        <div class="food-buttons">
-          <a
-            href="#"
-            id="blur"
-            onclick="toggle()"
-            class="button menu-button"
-            title="Menu"
-            >See our full menu &#x2192;</a
-          >
-          <a href="/booking.html" class="button table-button" title="Menu"
-            >Book a table &#x2192;</a
-          >
-        </div>
+        </form>
       </div>
       <div>
         <p class="quote-container text-center">

@@ -1,11 +1,13 @@
 :root {
   --heading-font: "Sigmar One", cursive;
   --secondary-font: "Montserrat", sans-serif;
+  --background-color: rgb(249, 247, 244);
 }
 body {
   margin: 0;
   padding: 0;
   font-family: var(--secondary-font);
+  background-color: rgb(249, 247, 244);
 }
 footer {
   margin: 0;
@@ -15,8 +17,9 @@ footer h2 {
   font-family: var(--heading-font);
   font-size: 34px;
 }
+
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: var(--background-color) !important;
 }
 .navbar-brand {
   font-size: 18px;
@@ -57,6 +60,29 @@ nav a:hover {
 .button:hover {
   background-color: black;
   color: white;
+}
+.booking-form form {
+  padding: 40px 0;
+}
+.booking-form {
+  padding: 200px !important;
+  text-align: center;
+}
+.booking-form p {
+  width: 80%;
+  margin: 0 auto;
+}
+.row {
+  margin: 20px;
+}
+.booking-form button {
+  width: 100%;
+  height: 40px;
+}
+.date,
+.time {
+  width: 100%;
+  height: 40px !important;
 }
 .landing-page {
   margin: 0;
@@ -259,5 +285,11 @@ nav a:hover {
     display: flex;
     flex-direction: row !important;
     padding: 20px;
+  }
+  .booking-form {
+    padding: 150px 20px !important;
+  }
+  .booking-form p {
+    margin: 20px auto;
   }
 }
